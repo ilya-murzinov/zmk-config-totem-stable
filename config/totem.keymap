@@ -161,6 +161,16 @@
             key-positions = <35 15>;
             layers = <2 3 4 5>;
         };
+
+        del_word {
+            bindings = <&kp LA(BACKSPACE)>;
+            key-positions = <35 16 17>;
+        };
+
+        del_word_fw {
+            bindings = <&kp LA(DELETE)>;
+            key-positions = <17 18 35>;
+        };
     };
 
     keymap {
