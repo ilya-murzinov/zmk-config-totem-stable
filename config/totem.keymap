@@ -183,19 +183,19 @@
 
         base {
             bindings = <
-                       &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I          &kp O    &kp P
-                       &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K          &kp L    &kp SEMI
-&mt LEFT_SHIFT ESCAPE  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA      &kp DOT  &kp SINGLE_QUOTE  &kp LEFT_BRACKET
-                                     &kp LCMD  &mo 2  &kp SPACE    &kp SPACE  &mo 1  &kp BACKSPACE
+                       &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O    &kp P
+                       &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K      &kp L    &kp SEMI
+&mt LEFT_SHIFT ESCAPE  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp DOT  &kp SINGLE_QUOTE  &kp LEFT_BRACKET
+                                     &kp LCMD  &mo 2  &kp SPACE    &kp SPACE  &mo 1  &mo 6
             >;
         };
 
         sym {
             bindings = <
-        &kp N1    &kp N2     &kp N3        &kp N4         &kp N5       &kp N6     &kp N7                &kp N8                 &kp N9     &kp N0
-        &kp PLUS  &kp MINUS  &kp ASTERISK  &kp SLASH      &kp EQUAL    &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER  &kp QUESTION
-&trans  &trans    &trans     &trans        &kp BACKSLASH  &kp PIPE     &trans     &kp LT                &kp GT                 &trans     &kp SLASH     &kp RIGHT_BRACKET
-                             &trans        &trans         &trans       &trans     &trans                &trans
+        &kp N1    &kp N2       &kp N3        &kp N4         &kp N5       &kp N6     &kp N7                &kp N8                 &kp N9     &kp N0
+        &kp PLUS  &kp MINUS    &kp ASTERISK  &kp SLASH      &kp EQUAL    &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER  &kp QUESTION
+&trans  &trans    &kp PERCENT  &kp AMPS      &kp BACKSLASH  &kp PIPE     &trans     &kp LT                &kp GT                 &kp EXCL   &kp SLASH     &kp RIGHT_BRACKET
+                               &trans        &trans         &trans       &trans     &trans                &trans
             >;
         };
 
@@ -232,6 +232,15 @@
        &none  &none  &none                 &none                  &none    &mmv MOVE_LEFT   &mmv MOVE_DOWN            &mmv MOVE_UP               &mmv MOVE_RIGHT  &none
 &none  &none  &none  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &none    &none            &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none            &none  &none
                      &trans                &none                  &none    &mkp MB1         &mkp MB2                  &none
+            >;
+        };
+
+        media {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans            &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans      &trans
+        &trans  &trans  &trans  &trans  &trans    &kp K_PLAY_PAUSE  &kp C_VOL_DN          &kp C_VOLUME_UP       &kp K_MUTE  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans            &trans                &trans                &trans      &trans  &trans
+                        &trans  &trans  &trans    &trans            &trans                &trans
             >;
         };
     };
