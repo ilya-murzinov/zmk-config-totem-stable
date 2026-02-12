@@ -137,6 +137,30 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <34 13>;
         };
+
+        close_tab {
+            bindings = <&kp LG(W)>;
+            key-positions = <9 35>;
+            layers = <2 3 4 5>;
+        };
+
+        new_tab {
+            bindings = <&kp LG(T)>;
+            key-positions = <35 19>;
+            layers = <2 3 4 5>;
+        };
+
+        reopen_tab {
+            bindings = <&kp LG(T)>;
+            key-positions = <35 30>;
+            layers = <2 3 4 5>;
+        };
+
+        refresh {
+            bindings = <&kp LG(R)>;
+            key-positions = <35 15>;
+            layers = <2 3 4 5>;
+        };
     };
 
     keymap {
