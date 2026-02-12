@@ -151,7 +151,7 @@
         };
 
         reopen_tab {
-            bindings = <&kp LG(T)>;
+            bindings = <&kp LG(LS(T))>;
             key-positions = <35 30>;
             layers = <2 3 4 5>;
         };
