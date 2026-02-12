@@ -74,6 +74,7 @@
         enter {
             bindings = <&kp RET>;
             key-positions = <16 17 18>;
+            layers = <0>;
         };
 
         tab {
@@ -131,11 +132,13 @@
         backspace2 {
             bindings = <&kp BACKSPACE>;
             key-positions = <16 35>;
+            layers = <0>;
         };
 
         backspace3 {
             bindings = <&kp BACKSPACE>;
             key-positions = <34 13>;
+            layers = <0>;
         };
 
         close_tab {
@@ -165,11 +168,13 @@
         del_word {
             bindings = <&kp LA(BACKSPACE)>;
             key-positions = <35 16 17>;
+            layers = <0>;
         };
 
         del_word_fw {
             bindings = <&kp LA(DELETE)>;
             key-positions = <17 18 35>;
+            layers = <0>;
         };
     };
 
