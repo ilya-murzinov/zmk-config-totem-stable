@@ -176,6 +176,16 @@
             key-positions = <17 18 35>;
             layers = <0>;
         };
+
+        mouse_fast {
+            bindings = <&mo 4>;
+            key-positions = <11 12 13 10>;
+        };
+
+        mouse_slow {
+            bindings = <&mo 5>;
+            key-positions = <11 12 13 34>;
+        };
     };
 
     keymap {
@@ -201,37 +211,37 @@
 
         nav {
             bindings = <
-       &kp LG(NUMBER_1)    &kp LG(NUMBER_2)  &kp LG(NUMBER_3)      &kp LG(NUMBER_4)       &kp LG(N5)    &none     &kp PAGE_DOWN             &kp PAGE_UP                &none      &none
-       &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)  &kp LC(LEFT)          &kp LC(RIGHT)          &none         &kp LEFT  &kp DOWN                  &kp UP                     &kp RIGHT  &none
-&none  &none               &none             &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &none         &none     &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none      &none  &none
-                                             &none                 &none                  &none         &none     &none                     &none
+       &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)      &kp LG(NUMBER_4)       &kp LG(N5)    &none     &kp PAGE_DOWN             &kp PAGE_UP                &none      &none
+       &none             &kp LC(UP_ARROW)  &kp LC(LEFT)          &kp LC(RIGHT)          &none         &kp LEFT  &kp DOWN                  &kp UP                     &kp RIGHT  &none
+&none  &none             &none             &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &none         &none     &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none      &none  &none
+                                           &none                 &none                  &none         &none     &none                     &none
             >;
         };
 
         mouse {
             bindings = <
-       &mo 5  &none  &none                 &none                  &none    &msc SCRL_RIGHT  &msc SCRL_UP              &msc SCRL_DOWN             &msc SCRL_LEFT   &none
-       &mo 4  &none  &none                 &none                  &none    &mmv MOVE_LEFT   &mmv MOVE_DOWN            &mmv MOVE_UP               &mmv MOVE_RIGHT  &none
-&none  &none  &none  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &none    &none            &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none            &none  &none
-                     &trans                &none                  &none    &mkp MB1         &mkp MB2                  &none
+       &none  &none  &none   &none  &none    &msc SCRL_RIGHT  &msc SCRL_UP              &msc SCRL_DOWN             &msc SCRL_LEFT   &none
+       &mo 4  &none  &none   &none  &none    &mmv MOVE_LEFT   &mmv MOVE_DOWN            &mmv MOVE_UP               &mmv MOVE_RIGHT  &none
+&none  &none  &none  &none   &none  &none    &none            &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none            &none  &none
+                     &trans  &none  &mo 5    &mkp MB1         &mkp MB2                  &none
             >;
         };
 
         mousefast {
             bindings = <
-       &none  &none  &none                 &none                  &none    &msc SCRL_RIGHT  &msc SCRL_UP              &msc SCRL_DOWN             &msc SCRL_LEFT   &none
-       &none  &none  &none                 &none                  &none    &mmv MOVE_LEFT   &mmv MOVE_DOWN            &mmv MOVE_UP               &mmv MOVE_RIGHT  &none
-&none  &none  &none  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &none    &none            &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none            &none  &none
-                     &trans                &none                  &none    &mkp MB1         &mkp MB2                  &none
+       &none  &none  &none   &none  &none    &msc SCRL_RIGHT  &msc SCRL_UP              &msc SCRL_DOWN             &msc SCRL_LEFT   &none
+       &none  &none  &none   &none  &none    &mmv MOVE_LEFT   &mmv MOVE_DOWN            &mmv MOVE_UP               &mmv MOVE_RIGHT  &none
+&none  &none  &none  &none   &none  &none    &none            &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none            &none  &none
+                     &trans  &none  &none    &mkp MB1         &mkp MB2                  &none
             >;
         };
 
         mouseslow {
             bindings = <
-       &none  &none  &none                 &none                  &none    &msc SCRL_RIGHT  &msc SCRL_UP              &msc SCRL_DOWN             &msc SCRL_LEFT   &none
-       &none  &none  &none                 &none                  &none    &mmv MOVE_LEFT   &mmv MOVE_DOWN            &mmv MOVE_UP               &mmv MOVE_RIGHT  &none
-&none  &none  &none  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &none    &none            &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none            &none  &none
-                     &trans                &none                  &none    &mkp MB1         &mkp MB2                  &none
+       &none  &none  &none   &none  &none    &msc SCRL_RIGHT  &msc SCRL_UP              &msc SCRL_DOWN             &msc SCRL_LEFT   &none
+       &none  &none  &none   &none  &none    &mmv MOVE_LEFT   &mmv MOVE_DOWN            &mmv MOVE_UP               &mmv MOVE_RIGHT  &none
+&none  &none  &none  &none   &none  &none    &none            &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none            &none  &none
+                     &trans  &none  &none    &mkp MB1         &mkp MB2                  &none
             >;
         };
 
