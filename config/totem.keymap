@@ -85,7 +85,7 @@
         r_word {
             bindings = <&kp LA(RIGHT)>;
             key-positions = <18 17>;
-            layers = <2>;
+            layers = <2 0>;
         };
 
         backspace {
