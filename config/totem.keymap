@@ -82,16 +82,6 @@
             key-positions = <10 11>;
         };
 
-        r_shift {
-            bindings = <&kp RIGHT_SHIFT>;
-            key-positions = <30 29>;
-        };
-
-        l_shift {
-            bindings = <&kp LEFT_SHIFT>;
-            key-positions = <21 22>;
-        };
-
         r_word {
             bindings = <&kp LA(RIGHT)>;
             key-positions = <18 17>;
@@ -106,7 +96,7 @@
         l_word {
             bindings = <&kp LA(LEFT)>;
             key-positions = <17 16>;
-            layers = <2>;
+            layers = <0 2>;
         };
 
         mouse_layer {
@@ -159,12 +149,6 @@
             layers = <2 3 4 5>;
         };
 
-        refresh {
-            bindings = <&kp LG(R)>;
-            key-positions = <35 15>;
-            layers = <2 3 4 5>;
-        };
-
         del_word {
             bindings = <&kp LA(BACKSPACE)>;
             key-positions = <35 16 17>;
@@ -175,26 +159,6 @@
             bindings = <&kp LA(DELETE)>;
             key-positions = <17 18 35>;
             layers = <0>;
-        };
-
-        mouse_fast {
-            bindings = <&mo 4>;
-            key-positions = <11 12 13 10>;
-        };
-
-        mouse_slow {
-            bindings = <&mo 5>;
-            key-positions = <11 12 13 34>;
-        };
-
-        disable_cmd_q {
-            bindings = <&none>;
-            key-positions = <33 0>;
-        };
-
-        disable_cmd_w {
-            bindings = <&none>;
-            key-positions = <33 1>;
         };
     };
 
@@ -212,10 +176,10 @@
 
         sym {
             bindings = <
-        &kp N1    &kp N2       &kp N3        &kp N4         &kp N5       &kp N6     &kp N7                &kp N8                 &kp N9     &kp N0
-        &kp PLUS  &kp MINUS    &kp ASTERISK  &kp SLASH      &kp EQUAL    &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER  &kp QUESTION
-&trans  &trans    &kp PERCENT  &kp AMPS      &kp BACKSLASH  &kp PIPE     &trans     &kp LT                &kp GT                 &kp EXCL   &kp SLASH     &kp RIGHT_BRACKET
-                               &trans        &trans         &trans       &trans     &trans                &trans
+        &kp N1     &kp N2       &kp N3     &kp N4         &kp N5       &kp N6     &kp N7                &kp N8                 &kp N9     &kp N0
+        &kp MINUS  &kp PLUS     &kp SLASH  &kp ASTERISK   &kp EQUAL    &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER  &kp QUESTION
+&trans  &trans     &kp PERCENT  &kp AMPS   &kp BACKSLASH  &kp PIPE     &trans     &kp LT                &kp GT                 &kp EXCL   &kp SLASH     &kp RIGHT_BRACKET
+                                &trans     &trans         &trans       &trans     &trans                &trans
             >;
         };
 
