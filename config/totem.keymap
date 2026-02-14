@@ -144,6 +144,12 @@
             key-positions = <17 18 35>;
             layers = <0>;
         };
+
+        bt_clear {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <34 31>;
+            layers = <6>;
+        };
     };
 
     behaviors {
@@ -211,9 +217,9 @@
 
         media {
             bindings = <
-       &none  &none  &none  &none  &none    &none             &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none       &bt BT_SEL 3
+       &none  &none  &none  &none  &none    &none             &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none       &bt BT_SEL 2
        &none  &none  &none  &none  &none    &kp C_PLAY_PAUSE  &kp C_VOL_DN          &kp C_VOLUME_UP       &kp K_MUTE  &bt BT_SEL 1
-&none  &none  &none  &none  &none  &none    &none             &none                 &none                 &none       &bt BT_SEL 0  &bt BT_CLR
+&none  &none  &none  &none  &none  &none    &none             &none                 &none                 &none       &bt BT_SEL 0  &none
                      &none  &none  &none    &none             &none                 &none
             >;
         };
