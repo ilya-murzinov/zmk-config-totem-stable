@@ -189,17 +189,17 @@
             bindings = <
         &kp N1     &kp N2       &kp N3     &kp N4         &kp N5       &kp N6     &kp N7                &kp N8                 &kp N9     &kp N0
         &kp MINUS  &kp PLUS     &kp SLASH  &kp ASTERISK   &kp EQUAL    &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER  &kp QUESTION
-&trans  &trans     &kp PERCENT  &kp AMPS   &kp BACKSLASH  &kp PIPE     &trans     &kp LT                &kp GT                 &kp EXCL   &kp RIGHT_BRACKET  &kp SLASH
+&trans  &kp UNDER  &kp PERCENT  &kp AMPS   &kp BACKSLASH  &kp PIPE     &trans     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EXCL   &kp RIGHT_BRACKET  &mt RSHIFT SLASH
                                 &trans     &trans         &trans       &trans     &trans                &trans
             >;
         };
 
         nav {
             bindings = <
-       &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)      &kp LG(NUMBER_4)       &kp LG(N5)    &none     &kp PAGE_DOWN             &kp PAGE_UP                &none      &none
-       &none             &kp LC(UP_ARROW)  &kp LC(LEFT)          &kp LC(RIGHT)          &none         &kp LEFT  &kp DOWN                  &kp UP                     &kp RIGHT  &none
-&none  &none             &none             &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &none         &none     &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none      &none  &none
-                                           &none                 &none                  &none         &none     &none                     &none
+        &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)      &kp LG(NUMBER_4)       &kp LG(N5)    &none     &kp PAGE_DOWN             &kp PAGE_UP                &none      &none
+        &none             &kp LC(UP_ARROW)  &kp LC(LEFT)          &kp LC(RIGHT)          &none         &kp LEFT  &kp DOWN                  &kp UP                     &kp RIGHT  &none
+&trans  &none             &none             &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &none         &none     &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none      &none  &trans
+                                            &none                 &none                  &none         &none     &none                     &none
             >;
         };
 
