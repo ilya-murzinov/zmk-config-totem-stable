@@ -21,8 +21,8 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define mouse 3
-#define mouse_fast 98
-#define mouse_slow 99
+#define mouse_fast 4
+#define mouse_slow 5
 
 &mmv {
     time-to-max-speed-ms = <10>;
@@ -36,28 +36,28 @@
 
 &mmv_input_listener {
     mouse_fast {
-        layers = <mouse_fast>;
+        layers = <4>;
         input-processors = <&zip_xy_scaler 3 1>;
     };
 };
 
 &mmv_input_listener {
     mouse_slow {
-        layers = <mouse_slow>;
+        layers = <5>;
         input-processors = <&zip_xy_scaler 1 3>;
     };
 };
 
 &msc_input_listener {
     scroll_fast {
-        layers = <mouse_fast>;
+        layers = <4>;
         input-processors = <&zip_scroll_scaler 2 1>;
     };
 };
 
 &msc_input_listener {
     scroll_slow {
-        layers = <mouse_slow>;
+        layers = <5>;
         input-processors = <&zip_scroll_scaler 1 2>;
     };
 };
@@ -197,6 +197,18 @@
             >;
         };
 
+        mouse_fast {
+            bindings = <
+  &none
+            >;
+        };
+
+        mouse_slow {
+            bindings = <
+  &none
+            >;
+        };
+
         media {
             bindings = <
         &trans  &trans  &kp LG(E)  &trans  &trans    &trans            &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans      &bt BT_SEL 3
@@ -212,18 +224,6 @@
        &none  &none  &none  &none  &none    &kp LG(LA(LEFT))  &kp LA(LG(F))  &kp LG(LC(F))  &kp LA(LG(RIGHT))  &none
 &none  &none  &none  &none  &none  &none    &none             &none          &none          &none              &none  &none
                      &none  &none  &none    &none             &none          &none
-            >;
-        };
-
-        mouse_fast {
-            bindings = <
-  &none
-            >;
-        };
-
-        mouse_slow {
-            bindings = <
-  &none
             >;
         };
     };
