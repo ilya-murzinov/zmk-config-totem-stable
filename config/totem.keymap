@@ -153,19 +153,19 @@
 
         bt_0 {
             bindings = <&bt BT_SEL 0>;
-            key-positions = <33 30>;
+            key-positions = <30 34>;
             layers = <6>;
         };
 
         bt_1 {
             bindings = <&bt BT_SEL 1>;
-            key-positions = <33 19>;
+            key-positions = <19 34>;
             layers = <6>;
         };
 
         bt_2 {
             bindings = <&bt BT_SEL 2>;
-            key-positions = <33 9>;
+            key-positions = <9 34>;
             layers = <6>;
         };
 
