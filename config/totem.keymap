@@ -146,7 +146,7 @@
         };
 
         bt_clear {
-            bindings = <&bt BT_CLR_ALL>;
+            bindings = <&bt BT_CLR>;
             key-positions = <34 31>;
             layers = <6>;
         };
@@ -154,16 +154,25 @@
         bt_0 {
             bindings = <&bt BT_SEL 0>;
             key-positions = <33 30>;
+            layers = <6>;
         };
 
         bt_1 {
             bindings = <&bt BT_SEL 1>;
             key-positions = <33 19>;
+            layers = <6>;
         };
 
         bt_2 {
             bindings = <&bt BT_SEL 2>;
             key-positions = <33 9>;
+            layers = <6>;
+        };
+
+        reset {
+            bindings = <&sys_reset>;
+            key-positions = <34 9 19 30>;
+            layers = <6>;
         };
     };
 
@@ -241,10 +250,10 @@
 
         windows {
             bindings = <
-       &none  &none  &none  &none  &none    &none             &none          &none          &none              &none
-       &none  &none  &none  &none  &none    &kp LG(LA(LEFT))  &kp LA(LG(F))  &kp LG(LC(F))  &kp LA(LG(RIGHT))  &none
-&none  &none  &none  &none  &none  &none    &none             &none          &none          &none              &none  &none
-                     &none  &none  &none    &none             &none          &none
+       &none  &none  &none  &none  &none    &none                 &none          &none          &none                  &none
+       &none  &none  &none  &none  &none    &kp LG(LA(LC(LEFT)))  &kp LA(LG(F))  &kp LG(LC(F))  &kp LA(LG(LC(RIGHT)))  &none
+&none  &none  &none  &none  &none  &none    &none                 &none          &none          &none                  &none  &none
+                     &none  &none  &none    &none                 &none          &none
             >;
         };
     };
