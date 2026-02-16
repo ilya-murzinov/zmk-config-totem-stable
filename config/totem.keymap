@@ -250,10 +250,10 @@
 
         windows {
             bindings = <
-       &none  &none  &none  &none  &none    &none                 &none          &none          &none                  &none
-       &none  &none  &none  &none  &none    &kp LG(LA(LC(LEFT)))  &kp LA(LG(F))  &kp LG(LC(F))  &kp LA(LG(LC(RIGHT)))  &none
-&none  &none  &none  &none  &none  &none    &none                 &none          &none          &none                  &none  &none
-                     &none  &none  &none    &none                 &none          &none
+       &none  &none  &none  &none  &none    &none                 &none              &none          &none                  &none
+       &none  &none  &none  &none  &none    &kp LG(LA(LC(LEFT)))  &kp LA(LG(LC(F)))  &kp LG(LC(F))  &kp LA(LG(LC(RIGHT)))  &none
+&none  &none  &none  &none  &none  &none    &none                 &none              &none          &none                  &none  &none
+                     &none  &none  &none    &none                 &none              &none
             >;
         };
     };
