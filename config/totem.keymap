@@ -74,6 +74,7 @@
         enter {
             bindings = <&kp RET>;
             key-positions = <16 17 18>;
+            timeout-ms = <100>;
         };
 
         tab {
@@ -90,17 +91,21 @@
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <18 19>;
+            timeout-ms = <100>;
         };
 
         l_word {
             bindings = <&kp LA(LEFT)>;
             key-positions = <17 16>;
             layers = <0 2>;
+            timeout-ms = <100>;
         };
 
         mouse_layer {
             bindings = <&mo 3>;
             key-positions = <11 12 13>;
+            slow-release;
+            timeout-ms = <100>;
         };
 
         backspace2 {
