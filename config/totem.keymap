@@ -189,10 +189,10 @@
 
         base {
             bindings = <
-                       &kp Q             &kp W        &kp E           &kp R    &kp T                  &kp Y                 &kp U  &kp I      &kp O    &kp P
-                       &mt LEFT_SHIFT A  &mt LCTRL S  &mt LEFT_ALT D  &lt 3 F  &kp G                  &kp H                 &kp J  &kp K      &kp L    &kp SEMI
-&mt LEFT_SHIFT ESCAPE  &kp Z             &kp X        &kp C           &kp V    &kp B                  &kp N                 &kp M  &kp COMMA  &kp DOT  &kp LEFT_BRACKET  &mt RIGHT_SHIFT SINGLE_QUOTE
-                                                      &mo 7           &mo 2    &mt LEFT_META SPACE    &mt RIGHT_META SPACE  &mo 1  &mo 6
+            &kp Q             &kp W        &kp E           &kp R    &kp T                  &kp Y                 &kp U  &kp I      &kp O    &kp P
+            &mt LEFT_SHIFT A  &mt LCTRL S  &mt LEFT_ALT D  &lt 3 F  &kp G                  &kp H                 &kp J  &kp K      &kp L    &mt RSHIFT SEMI
+&kp ESCAPE  &kp Z             &kp X        &kp C           &kp V    &kp B                  &kp N                 &kp M  &kp COMMA  &kp DOT  &kp LEFT_BRACKET  &kp SINGLE_QUOTE
+                                           &mo 7           &mo 2    &mt LEFT_META SPACE    &mt RIGHT_META SPACE  &mo 1  &mo 6
             >;
         };
 
@@ -208,7 +208,7 @@
         nav {
             bindings = <
         &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)      &kp LG(NUMBER_4)       &kp LG(N5)    &none     &kp PAGE_DOWN             &kp PAGE_UP                &none      &none
-        &none             &kp LC(UP_ARROW)  &kp LC(LEFT)          &kp LC(RIGHT)          &none         &kp LEFT  &kp DOWN                  &kp UP                     &kp RIGHT  &none
+        &kp LEFT_SHIFT    &kp LC(UP_ARROW)  &kp LC(LEFT)          &kp LC(RIGHT)          &none         &kp LEFT  &kp DOWN                  &kp UP                     &kp RIGHT  &none
 &trans  &none             &none             &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &none         &none     &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none      &none  &trans
                                             &none                 &none                  &none         &none     &none                     &none
             >;
@@ -216,10 +216,10 @@
 
         mouse {
             bindings = <
-       &none  &none  &none   &none  &none    &msc SCRL_RIGHT  &msc SCRL_UP              &msc SCRL_DOWN             &msc SCRL_LEFT   &none
-       &mo 4  &mo 4  &mo 5   &none  &none    &mmv MOVE_LEFT   &mmv MOVE_DOWN            &mmv MOVE_UP               &mmv MOVE_RIGHT  &none
-&none  &none  &none  &none   &none  &none    &none            &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none            &none  &none
-                     &trans  &mo 5  &mo 5    &mkp MB1         &mkp MB2                  &none
+       &none           &none  &none   &none  &none    &msc SCRL_RIGHT  &msc SCRL_UP              &msc SCRL_DOWN             &msc SCRL_LEFT   &none
+       &kp LEFT_SHIFT  &mo 4  &mo 5   &none  &none    &mmv MOVE_LEFT   &mmv MOVE_DOWN            &mmv MOVE_UP               &mmv MOVE_RIGHT  &none
+&none  &none           &none  &none   &none  &none    &none            &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none            &none  &none
+                              &trans  &mo 5  &mo 5    &mkp MB1         &mkp MB2                  &none
             >;
         };
 
