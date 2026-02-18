@@ -150,36 +150,36 @@
 
         bt_clear {
             bindings = <&bt BT_CLR>;
-            key-positions = <34 31>;
+            key-positions = <34 20>;
             layers = <6>;
         };
 
         bt_0 {
             bindings = <&bt BT_SEL 0>;
-            key-positions = <30 34>;
+            key-positions = <34 21>;
             layers = <6>;
         };
 
         bt_1 {
             bindings = <&bt BT_SEL 1>;
-            key-positions = <19 34>;
+            key-positions = <34 10>;
             layers = <6>;
         };
 
         bt_2 {
             bindings = <&bt BT_SEL 2>;
-            key-positions = <9 34>;
+            key-positions = <34 0>;
             layers = <6>;
         };
 
         reset {
             bindings = <&sys_reset>;
-            key-positions = <34 9 19 30>;
+            key-positions = <34 0 10 21>;
             layers = <6>;
         };
 
         language_switch {
-            bindings = <&kp LA(LG(SPACE))>;
+            bindings = <&kp LA(SPACE)>;
             key-positions = <34 35>;
         };
     };
