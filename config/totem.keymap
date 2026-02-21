@@ -43,28 +43,28 @@
 
 &mmv_input_listener {
     mouse_fast {
-        layers = <5>;
+        layers = <6>;
         input-processors = <&zip_xy_scaler 3 1>;
     };
 };
 
 &mmv_input_listener {
     mouse_slow {
-        layers = <6>;
+        layers = <7>;
         input-processors = <&zip_xy_scaler 1 3>;
     };
 };
 
 &msc_input_listener {
     scroll_fast {
-        layers = <5>;
+        layers = <6>;
         input-processors = <&zip_scroll_scaler 2 1>;
     };
 };
 
 &msc_input_listener {
     scroll_slow {
-        layers = <6>;
+        layers = <7>;
         input-processors = <&zip_scroll_scaler 1 2>;
     };
 };
