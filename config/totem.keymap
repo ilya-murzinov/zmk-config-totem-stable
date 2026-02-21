@@ -182,6 +182,11 @@
             bindings = <&kp LA(SPACE)>;
             key-positions = <34 35>;
         };
+
+        caps_word {
+            bindings = <&caps_word>;
+            key-positions = <10 19>;
+        };
     };
 
     macros {
