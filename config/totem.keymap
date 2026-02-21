@@ -151,31 +151,31 @@
         bt_clear {
             bindings = <&bt BT_CLR>;
             key-positions = <34 20>;
-            layers = <9>;
+            layers = <8>;
         };
 
         bt_0 {
             bindings = <&bt BT_SEL 0>;
             key-positions = <34 21>;
-            layers = <9>;
+            layers = <8>;
         };
 
         bt_1 {
             bindings = <&bt BT_SEL 1>;
             key-positions = <34 10>;
-            layers = <9>;
+            layers = <8>;
         };
 
         bt_2 {
             bindings = <&bt BT_SEL 2>;
             key-positions = <34 0>;
-            layers = <9>;
+            layers = <8>;
         };
 
         reset {
             bindings = <&sys_reset>;
             key-positions = <34 0 10 21>;
-            layers = <9>;
+            layers = <8>;
         };
 
         language_switch {
@@ -249,10 +249,10 @@
 
         nav {
             bindings = <
-         &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)      &kp LG(NUMBER_4)       &kp LG(N5)    &none     &kp PAGE_DOWN             &kp PAGE_UP                &none      &none
-         &kp LEFT_SHIFT    &kp LC(UP_ARROW)  &kp LC(LEFT)          &kp LC(RIGHT)          &none         &kp LEFT  &kp DOWN                  &kp UP                     &kp RIGHT  &none
-&tog 10  &none             &none             &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &none         &none     &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none      &none  &trans
-                                             &none                 &none                  &none         &none     &none                     &none
+       &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)      &kp LG(NUMBER_4)       &kp LG(N5)    &none     &kp PAGE_DOWN             &kp PAGE_UP                &none      &none
+       &kp LEFT_SHIFT    &kp LC(UP_ARROW)  &kp LC(LEFT)          &kp LC(RIGHT)          &none         &kp LEFT  &kp DOWN                  &kp UP                     &kp RIGHT  &none
+&none  &none             &none             &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &none         &none     &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none      &none  &trans
+                                           &none                 &none                  &none         &none     &none                     &none
             >;
         };
 
@@ -310,15 +310,6 @@
        &name           &last_name  &personal_email  &work_email  &none    &none  &none  &none  &none  &none
 &none  &none           &none       &none            &none        &none    &none  &none  &none  &none  &none  &none
                                    &none            &none        &none    &none  &none  &none
-            >;
-        };
-
-        m8 {
-            bindings = <
-         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-         &kp A   &kp S   &kp D   &kp F   &trans    &kp H   &kp J   &kp K   &kp L   &kp SEMI
-&tog 10  &trans  &trans  &kp C   &kp V   &trans    &trans  &trans  &trans  &trans  &trans    &trans
-                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
