@@ -79,9 +79,11 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-//            hold-trigger-key-positions = < ... >; // List of keys on the right side of the keyboard
-//            hold-trigger-on-release;
+
+            //            hold-trigger-key-positions = < ... >; // List of keys on the right side of the keyboard
+            //            hold-trigger-on-release;
         };
+
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -90,12 +92,12 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
- //           hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
- //           hold-trigger-on-release;
+
+            //           hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
+            //           hold-trigger-on-release;
         };
     };
 };
-
 
 / {
     combos {
@@ -215,6 +217,13 @@
             bindings = <&caps_word>;
             key-positions = <10 19>;
         };
+
+        mouse_layer {
+            bindings = <&mo 5>;
+            key-positions = <12 13>;
+            slow-release;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -259,10 +268,10 @@
 
         base {
             bindings = <
-       &kp Q             &kp W        &kp E           &kp R    &kp T          &kp Y        &kp U           &kp I            &kp O        &kp P
-       &hml LEFT_SHIFT A  &hml LCTRL S  &hml LEFT_ALT D  &lt 5 F  &kp G          &kp H        &hmr LEFT_GUI J  &hmr RIGHT_ALT K  &hmr RCTRL L  &hmr RSHIFT SEMI
-&none  &kp Z             &kp X        &kp C           &kp V    &kp B          &kp N        &kp M           &kp COMMA        &kp DOT      &kp APOS         &kp APOS
-                                      &none           &mo 2    &lt 3 SPACE    &lt 4 SPACE  &mo 1           &mo 8
+       &kp Q              &kp W         &kp E            &kp R            &kp T          &kp Y        &kp U            &kp I             &kp O         &kp P
+       &hml LEFT_SHIFT A  &hml LCTRL S  &hml LEFT_ALT D  &hml LEFT_GUI F  &kp G          &kp H        &hmr LEFT_GUI J  &hmr RIGHT_ALT K  &hmr RCTRL L  &hmr RSHIFT SEMI
+&none  &kp Z              &kp X         &kp C            &kp V            &kp B          &kp N        &kp M            &kp COMMA         &kp DOT       &kp APOS          &kp APOS
+                                        &none            &mo 2            &lt 3 SPACE    &lt 4 SPACE  &mo 1            &mo 8
             >;
         };
 
@@ -304,10 +313,10 @@
 
         mouse {
             bindings = <
-       &none           &none  &none   &none   &none     &msc SCRL_RIGHT  &msc SCRL_UP              &msc SCRL_DOWN             &msc SCRL_LEFT   &none
-       &kp LEFT_SHIFT  &mo 6  &mo 7   &none   &none     &mmv MOVE_LEFT   &mmv MOVE_DOWN            &mmv MOVE_UP               &mmv MOVE_RIGHT  &none
-&none  &none           &none  &none   &none   &none     &none            &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none            &none  &none
-                              &trans  &trans  &trans    &mkp MB1         &mkp MB2                  &none
+       &none           &none  &none   &none   &none           &msc SCRL_RIGHT  &msc SCRL_UP              &msc SCRL_DOWN             &msc SCRL_LEFT   &none
+       &kp LEFT_SHIFT  &mo 6  &mo 7   &none   &none           &mmv MOVE_LEFT   &mmv MOVE_DOWN            &mmv MOVE_UP               &mmv MOVE_RIGHT  &none
+&none  &none           &none  &none   &none   &none           &none            &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none            &none  &none
+                              &trans  &trans  &kp LEFT_GUI    &mkp MB1         &mkp MB2                  &none
             >;
         };
 
