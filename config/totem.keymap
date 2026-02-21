@@ -235,10 +235,10 @@
 
         russian {
             bindings = <
-        &trans  &trans  &trans  &trans  &kp GRAVE    &trans  &trans             &trans  &trans  &kp LEFT_BRACKET
-        &trans  &trans  &trans  &trans  &trans       &trans  &trans             &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &kp RIGHT_BRACKET  &trans  &trans  &trans            &trans
-                        &trans  &trans  &trans       &trans  &trans             &trans
+        &trans  &kp QUESTION  &trans  &trans  &kp GRAVE    &trans  &trans             &trans     &trans   &kp LEFT_BRACKET
+        &trans  &trans        &trans  &trans  &trans       &trans  &trans             &trans     &trans   &trans
+&trans  &trans  &trans        &trans  &trans  &trans       &trans  &kp RIGHT_BRACKET  &kp COMMA  &kp DOT  &trans            &trans
+                              &trans  &trans  &trans       &trans  &trans             &trans
             >;
         };
 
