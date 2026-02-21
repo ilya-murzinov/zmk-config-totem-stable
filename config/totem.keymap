@@ -235,9 +235,9 @@
 
         russian {
             bindings = <
-        &trans  &kp LS(N7)  &trans  &trans  &kp GRAVE    &trans  &trans             &trans            &trans      &kp LEFT_BRACKET
-        &trans  &trans      &trans  &trans  &trans       &trans  &trans             &trans            &trans      &trans
-&trans  &trans  &trans      &trans  &trans  &trans       &trans  &kp RIGHT_BRACKET  &kp LA(KP_COMMA)  &kp KP_DOT  &trans            &trans
+        &trans  &kp LS(N7)  &trans  &trans  &kp GRAVE    &trans  &trans             &trans         &trans     &kp LEFT_BRACKET
+        &trans  &trans      &trans  &trans  &trans       &trans  &trans             &trans         &trans     &trans
+&trans  &trans  &trans      &trans  &trans  &trans       &trans  &kp RIGHT_BRACKET  &kp LS(SLASH)  &kp SLASH  &trans            &trans
                             &trans  &trans  &trans       &trans  &trans             &trans
             >;
         };
