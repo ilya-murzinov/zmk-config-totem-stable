@@ -80,6 +80,9 @@
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
 
+            //            hold-trigger-key-positions = < ... >; // List of keys on the right side of the keyboard
+            //            hold-trigger-on-release;
+
             hold-trigger-key-positions = <5 15 26 16 6 7 17 28 27 8 18 29 9 19 30>;
             hold-trigger-on-release;
         };
@@ -92,6 +95,9 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
+
+            //           hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
+            //           hold-trigger-on-release;
 
             hold-trigger-key-positions = <0 0 1 4 10 11 12 13 14 21 22 23 24 25 2 3>;
             hold-trigger-on-release;
@@ -167,13 +173,6 @@
             label = "APOS_TD";
             #binding-cells = <0>;
             bindings = <&apos_single>, <&apos_pair>, <&quote_pair>;
-        };
-
-        f_td: f_td {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&lt 5 F>, <&mt LEFT_GUI F>;
         };
     };
 };
@@ -418,13 +417,6 @@
             bindings = <&kp DOUBLE_QUOTES &kp DOUBLE_QUOTES &kp LEFT>;
             label = "QUOTE_PAIR";
         };
-
-        l_cmd: l_cmd {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI>;
-            label = "L_CMD";
-        };
     };
 
     keymap {
@@ -432,10 +424,10 @@
 
         base {
             bindings = <
-       &kp Q              &kp W         &kp E            &kp R  &kp T          &kp Y        &kp U            &kp I             &kp O         &kp P
-       &hml LEFT_SHIFT A  &hml LCTRL S  &hml LEFT_ALT D  &f_td  &kp G          &kp H        &hmr LEFT_GUI J  &hmr RIGHT_ALT K  &hmr RCTRL L  &hmr RSHIFT SEMI
-&none  &kp Z              &kp X         &kp C            &kp V  &kp B          &kp N        &kp M            &kp COMMA         &kp DOT       &apos_quote       &none
-                                        &none            &mo 2  &lt 3 SPACE    &lt 4 SPACE  &mo 1            &mo 8
+       &kp Q              &kp W         &kp E            &kp R            &kp T          &kp Y        &kp U            &kp I             &kp O         &kp P
+       &hml LEFT_SHIFT A  &hml LCTRL S  &hml LEFT_ALT D  &hml LEFT_GUI F  &kp G          &kp H        &hmr LEFT_GUI J  &hmr RIGHT_ALT K  &hmr RCTRL L  &hmr RSHIFT SEMI
+&none  &kp Z              &kp X         &kp C            &kp V            &kp B          &kp N        &kp M            &kp COMMA         &kp DOT       &apos_quote       &none
+                                        &none            &mo 2            &lt 3 SPACE    &lt 4 SPACE  &mo 1            &mo 8
             >;
         };
 
