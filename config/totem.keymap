@@ -167,6 +167,20 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        apos_b: apos_b {
+            compatible = "zmk,behavior-tap-dance";
+            label = "APOS_B";
+            #binding-cells = <0>;
+            bindings = <&kp APOS>, <&apos>;
+        };
+
+        quote_b: quote_b {
+            compatible = "zmk,behavior-tap-dance";
+            label = "QUOTE_B";
+            #binding-cells = <0>;
+            bindings = <&kp DOUBLE_QUOTES>, <&quote>;
+        };
     };
 };
 
@@ -390,14 +404,14 @@
             label = "CURLY_BRACES";
         };
 
-        apos_b: apos_b {
+        apos: apos {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SQT &kp SQT &kp LEFT_ARROW>;
-            label = "APOS_B";
+            label = "APOS";
         };
 
-        quote_b: quote_b {
+        quote: quote_b {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp DQT &kp DQT &kp LEFT_ARROW>;
@@ -417,7 +431,7 @@
             >;
         };
 
-        russian {
+        rus {
             bindings = <
         &trans  &kp LS(N7)  &trans  &trans  &kp GRAVE    &trans  &trans             &trans         &trans     &kp LEFT_BRACKET
         &trans  &trans      &trans  &trans  &trans       &trans  &trans             &trans         &trans     &kp APOS
