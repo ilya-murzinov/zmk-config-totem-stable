@@ -427,9 +427,10 @@
         quote_pair: quote_pair {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DQT &kp DQT>,
-                <&macro_release &kp LSHFT>,
-                <&kp LEFT>;
+                bindings =
+                    <&kp LS(APOSTROPHE)>
+                    <&kp LS(APOSTROPHE)>
+                    <&kp LEFT>;
             label = "QUOTE_PAIR";
         };
     };
