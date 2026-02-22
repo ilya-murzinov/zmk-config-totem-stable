@@ -163,7 +163,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "APOS_QUOTE";
             bindings = <&apos_td>, <&quote_td>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -431,8 +430,8 @@
             bindings = <
                 &kp DQT 
                 &kp DQT 
-                &macro_release MOD_LSFT
-                &macro_release MOD_RSFT
+                &macro_release <MOD_LSFT>
+                &macro_release <MOD_RSFT>
                 &kp LEFT>;
             label = "QUOTE_PAIR";
         };
