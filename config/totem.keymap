@@ -428,8 +428,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
                 bindings =
-                    <&kp LS(APOSTROPHE)>
-                    <&kp LS(APOSTROPHE)>
+                    <&kp LS(APOSTROPHE)>,
+                    <&kp LS(APOSTROPHE)>,
                     <&kp LEFT>;
             label = "QUOTE_PAIR";
         };
