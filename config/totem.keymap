@@ -162,7 +162,8 @@
         apos_quote: apos_quote {
             compatible = "zmk,behavior-mod-morph";
             label = "APOS_QUOTE";
-            bindings = <&apos_td>, <&quote_td>;
+            bindings = <&apos_td>, <&kp DOUBLE_QUOTES>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -171,14 +172,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "APOS_TD";
             #binding-cells = <0>;
-            bindings = <&apos_single>, <&apos_pair>;
-        };
-
-        quote_td: quote_td {
-            compatible = "zmk,behavior-tap-dance";
-            label = "QUOTE_TD";
-            #binding-cells = <0>;
-            bindings = <&quote_single>, <&quote_pair>;
+            bindings = <&apos_single>, <&apos_pair>, <&quote_pair>;
         };
     };
 };
@@ -417,20 +411,10 @@
             label = "APOS_PAIR";
         };
 
-        quote_single: quote_single {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp DQT>;
-            label = "QUOTE_SINGLE";
-        };
-
         quote_pair: quote_pair {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-                bindings =
-                    <&kp LS(APOSTROPHE)>,
-                    <&kp LS(APOSTROPHE)>,
-                    <&kp LEFT>;
+            bindings = <&kp DOUBLE_QUOTES &kp DOUBLE_QUOTES &kp LEFT>;
             label = "QUOTE_PAIR";
         };
     };
