@@ -162,24 +162,24 @@
         apos_quote: apos_quote {
             compatible = "zmk,behavior-mod-morph";
             label = "APOS_QUOTE";
-            bindings = <&apos_b>, <&quote_b>;
+            bindings = <&apos_td>, <&quote_td>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        apos_b: apos_b {
+        apos_td: apos_td {
             compatible = "zmk,behavior-tap-dance";
-            label = "APOS_B";
+            label = "APOS_TD";
             #binding-cells = <0>;
-            bindings = <&kp APOS>, <&apos>;
+            bindings = <&apos_single>, <&apos_pair>;
         };
 
-        quote_b: quote_b {
+        quote_td: quote_td {
             compatible = "zmk,behavior-tap-dance";
-            label = "QUOTE_B";
+            label = "QUOTE_TD";
             #binding-cells = <0>;
-            bindings = <&kp DOUBLE_QUOTES>, <&quote>;
+            bindings = <&quote_single>, <&quote_pair>;
         };
     };
 };
@@ -404,18 +404,28 @@
             label = "CURLY_BRACES";
         };
 
-        apos: apos {
+        apos_single: apos_single {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SQT &kp SQT &kp LEFT_ARROW>;
-            label = "APOS";
+            bindings = <&kp SQT>;
+            label = "APOS_SINGLE";
         };
 
-        quote: quote_b {
+        apos_pair: apos_pair {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp DQT &kp DQT &kp LEFT_ARROW>;
-            label = "QUOTE_B";
+            bindings = <&kp SQT &kp SQT &kp LEFT>;
+            label = "APOS_PAIR";
+        };
+
+        quote_single: quote_single {
+            compatible = "zmk,behavior-macro";
+            bindings = <&kp DQT>;
+            label = "QUOTE_SINGLE";
+        };
+
+        quote_pair: quote_pair {
+            compatible = "zmk,behavior-macro";
+            bindings = <&kp DQT &kp DQT &kp LEFT>;
+            label = "QUOTE_PAIR";
         };
     };
 
