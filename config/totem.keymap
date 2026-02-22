@@ -137,6 +137,27 @@
             #binding-cells = <0>;
             bindings = <&kp ASTRK>, <&mult>;
         };
+
+        paren_b: paren_b {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PAREN_B";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&paren>;
+        };
+
+        bracket_b: bracket_b {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BRACKET_B";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET>, <&brackets>;
+        };
+
+        curly_b: curly_b {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CURLY_B";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT_BRACE)>, <&curly_braces>;
+        };
     };
 };
 
@@ -401,10 +422,10 @@
 
         sym_add {
             bindings = <
-       &none  &none  &none  &none  &none    &kp TILDE  &curly_braces  &kp RIGHT_BRACE        &none  &none
-       &none  &none  &none  &none  &none    &kp GRAVE  &paren         &kp RIGHT_PARENTHESIS  &none  &none
-&none  &none  &none  &none  &none  &none    &none      &brackets      &kp RIGHT_BRACKET      &none  &none  &none
-                     &none  &none  &none    &none      &none          &none
+       &none  &none  &none  &none  &none    &kp TILDE  &curly_b    &kp RIGHT_BRACE        &none  &none
+       &none  &none  &none  &none  &none    &kp GRAVE  &paren_b    &kp RIGHT_PARENTHESIS  &none  &none
+&none  &none  &none  &none  &none  &none    &none      &bracket_b  &kp RIGHT_BRACKET      &none  &none  &none
+                     &none  &none  &none    &none      &none       &none
             >;
         };
 
