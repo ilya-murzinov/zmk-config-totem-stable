@@ -406,24 +406,28 @@
 
         apos_single: apos_single {
             compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings = <&kp SQT>;
             label = "APOS_SINGLE";
         };
 
         apos_pair: apos_pair {
             compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings = <&kp SQT &kp SQT &kp LEFT>;
             label = "APOS_PAIR";
         };
 
         quote_single: quote_single {
             compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings = <&kp DQT>;
             label = "QUOTE_SINGLE";
         };
 
         quote_pair: quote_pair {
             compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings = <&kp DQT &kp DQT &kp LEFT>;
             label = "QUOTE_PAIR";
         };
