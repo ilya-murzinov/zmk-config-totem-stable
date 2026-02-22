@@ -102,6 +102,41 @@
             hold-trigger-key-positions = <0 0 1 4 10 11 12 13 14 21 22 23 24 25 2 3>;
             hold-trigger-on-release;
         };
+
+        eq_b: eq_b {
+            compatible = "zmk,behavior-tap-dance";
+            label = "EQ_B";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&eq>;
+        };
+
+        minus_b: minus_b {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MINUS_B";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&minus>;
+        };
+
+        plus_b: plus_b {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PLUS_B";
+            #binding-cells = <0>;
+            bindings = <&kp PLUS>, <&plus>;
+        };
+
+        div_b: div_b {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DIV_B";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&div>;
+        };
+
+        mult_b: mult_b {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MULT_B";
+            #binding-cells = <0>;
+            bindings = <&kp ASTRK>, <&mult>;
+        };
     };
 };
 
@@ -271,36 +306,57 @@
         eq: eq {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp SPACE &kp EQUAL &kp SPACE>;
+            bindings = <&kp SPACE &kp EQUAL &kp SPACE>;
             label = "EQ";
         };
 
         mult: mult {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp SPACE &kp STAR &kp SPACE>;
+            bindings = <&kp SPACE &kp STAR &kp SPACE>;
             label = "MULT";
         };
 
         div: div {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp SPACE &kp FSLH &kp SPACE>;
+            bindings = <&kp SPACE &kp FSLH &kp SPACE>;
             label = "DIV";
         };
 
         minus: minus {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp SPACE &kp MINUS &kp SPACE>;
+            bindings = <&kp SPACE &kp MINUS &kp SPACE>;
             label = "MINUS";
         };
 
         plus: plus {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp SPACE &kp PLUS &kp SPACE>;
+            bindings = <&kp SPACE &kp PLUS &kp SPACE>;
             label = "PLUS";
+        };
+
+        paren: paren {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+            label = "PAREN";
+        };
+
+        brackets: brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT &kp RBKT &kp LEFT>;
+            label = "BRACKETS";
+        };
+
+        curly_braces: curly_braces {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC &kp RBRC &kp LEFT>;
+            label = "CURLY_BRACES";
         };
     };
 
@@ -336,19 +392,19 @@
 
         sym {
             bindings = <
-       &kp EXCL   &kp QUESTION  &kp AT         &kp HASH      &kp DOLLAR    &none        &kp N7  &kp N8  &kp N9  &none
-       &kp MINUS  &kp PLUS      &kp SLASH      &kp ASTERISK  &kp CARET     &none        &kp N4  &kp N5  &kp N6  &kp EQUAL
-&none  &kp UNDER  &kp PERCENT   &kp BACKSLASH  &kp AMPS      &kp PIPE      &kp N0       &kp N1  &kp N2  &kp N3  &kp DOT    &none
-                                &none          &none         &none         &lt 4 SPACE  &mo 9   &none
+       &kp EXCL   &kp QUESTION  &kp AT         &kp HASH  &kp DOLLAR    &none        &kp N7  &kp N8  &kp N9  &none
+       &minus_b   &plus_b       &div_b         &mult_b   &kp CARET     &none        &kp N4  &kp N5  &kp N6  &eq_b
+&none  &kp UNDER  &kp PERCENT   &kp BACKSLASH  &kp AMPS  &kp PIPE      &kp N0       &kp N1  &kp N2  &kp N3  &kp DOT  &none
+                                &none          &none     &none         &lt 4 SPACE  &mo 9   &none
             >;
         };
 
         sym_add {
             bindings = <
-       &none   &none  &none  &none  &none    &kp TILDE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &none  &none
-       &minus  &plus  &div   &mult  &none    &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none  &eq
-&none  &none   &none  &none  &none  &none    &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none  &none  &none
-                      &none  &none  &none    &none      &none                 &none
+       &none  &none  &none  &none  &none    &kp TILDE  &curly_braces  &kp RIGHT_BRACE        &none  &none
+       &none  &none  &none  &none  &none    &kp GRAVE  &paren         &kp RIGHT_PARENTHESIS  &none  &none
+&none  &none  &none  &none  &none  &none    &none      &brackets      &kp RIGHT_BRACKET      &none  &none  &none
+                     &none  &none  &none    &none      &none          &none
             >;
         };
 
