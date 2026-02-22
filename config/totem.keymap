@@ -158,6 +158,15 @@
             #binding-cells = <0>;
             bindings = <&kp LG(LEFT_BRACE)>, <&curly_braces>;
         };
+
+        apos_quote: apos_quote {
+            compatible = "zmk,behavior-mod-morph";
+            label = "APOS_QUOTE";
+            bindings = <&apos_b>, <&quote_b>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 };
 
@@ -379,6 +388,20 @@
             bindings = <&kp LBRC &kp RBRC &kp LEFT>;
             label = "CURLY_BRACES";
         };
+
+        apos_b: apos_b {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp SQT &kp LEFT_ARROW>;
+            label = "APOS_B";
+        };
+
+        quote_b: quote_b {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DQT &kp DQT &kp LEFT_ARROW>;
+            label = "QUOTE_B";
+        };
     };
 
     keymap {
@@ -388,7 +411,7 @@
             bindings = <
        &kp Q              &kp W         &kp E            &kp R            &kp T          &kp Y        &kp U            &kp I             &kp O         &kp P
        &hml LEFT_SHIFT A  &hml LCTRL S  &hml LEFT_ALT D  &hml LEFT_GUI F  &kp G          &kp H        &hmr LEFT_GUI J  &hmr RIGHT_ALT K  &hmr RCTRL L  &hmr RSHIFT SEMI
-&none  &kp Z              &kp X         &kp C            &kp V            &kp B          &kp N        &kp M            &kp COMMA         &kp DOT       &kp APOS          &kp APOS
+&none  &kp Z              &kp X         &kp C            &kp V            &kp B          &kp N        &kp M            &kp COMMA         &kp DOT       &apos_quote       &none
                                         &none            &mo 2            &lt 3 SPACE    &lt 4 SPACE  &mo 1            &mo 8
             >;
         };
