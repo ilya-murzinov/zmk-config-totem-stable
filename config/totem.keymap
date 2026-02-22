@@ -287,6 +287,7 @@
         caps_word {
             bindings = <&caps_word>;
             key-positions = <10 19>;
+            timeout-ms = <100>;
         };
 
         mouse_layer {
