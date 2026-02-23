@@ -164,7 +164,6 @@
             label = "APOS_QUOTE";
             bindings = <&apos_td>, <&kp DOUBLE_QUOTES>;
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
