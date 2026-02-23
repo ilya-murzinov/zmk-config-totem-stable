@@ -174,6 +174,20 @@
             #binding-cells = <0>;
             bindings = <&apos_single>, <&apos_pair>, <&quote_pair>;
         };
+
+        semi_td: semi_td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SEMI_TD";
+            #binding-cells = <0>;
+            bindings = <&hmr RIGHT_SHIFT SEMI>, <&kp SLASH>;
+        };
+
+        grave_td: grave_td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GRAVE_TD";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE>, <&triple_grave>;
+        };
     };
 };
 
@@ -419,6 +433,13 @@
             bindings = <&kp DOUBLE_QUOTES &kp DOUBLE_QUOTES &kp LEFT>;
             label = "QUOTE_PAIR";
         };
+
+        triple_grave: grave_td {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE &kp LS(RET) &kp LS(RET) &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW>;
+            label = "GRAVE_TD";
+        };
     };
 
     keymap {
@@ -427,8 +448,8 @@
         base {
             bindings = <
        &kp Q              &kp W         &kp E            &kp R            &kp T          &kp Y        &kp U            &kp I             &kp O         &kp P
-       &hml LEFT_SHIFT A  &hml LCTRL S  &hml LEFT_ALT D  &hml LEFT_GUI F  &kp G          &kp H        &hmr LEFT_GUI J  &hmr RIGHT_ALT K  &hmr RCTRL L  &hmr RSHIFT SEMI
-&none  &kp Z              &kp X         &kp C            &kp V            &kp B          &kp N        &kp M            &kp COMMA         &kp DOT       &apos_quote       &none
+       &hml LEFT_SHIFT A  &hml LCTRL S  &hml LEFT_ALT D  &hml LEFT_GUI F  &kp G          &kp H        &hmr LEFT_GUI J  &hmr RIGHT_ALT K  &hmr RCTRL L  &semi_td
+&none  &kp Z              &kp X         &kp C            &kp V            &kp B          &kp N        &kp M            &kp COMMA         &kp DOT       &apos_quote  &none
                                         &none            &mo 2            &lt 3 SPACE    &lt 4 SPACE  &mo 1            &mo 8
             >;
         };
@@ -453,9 +474,9 @@
 
         sym {
             bindings = <
-       &kp EXCL   &kp QUESTION  &kp AT         &kp HASH  &kp DOLLAR    &kp COMMA    &kp N7  &kp N8  &kp N9  &none
-       &minus_b   &plus_b       &div_b         &mult_b   &kp CARET     &kp DOT      &kp N4  &kp N5  &kp N6  &eq_b
-&none  &kp UNDER  &kp PERCENT   &kp BACKSLASH  &kp AMPS  &kp PIPE      &kp N0       &kp N1  &kp N2  &kp N3  &none  &none
+       &kp EXCL   &kp QUESTION  &kp AT         &kp HASH  &kp DOLLAR    &kp COMMA    &kp N7  &kp N8  &kp N9  &eq_b
+       &minus_b   &plus_b       &div_b         &mult_b   &kp CARET     &kp DOT      &kp N4  &kp N5  &kp N6  &kp SLASH
+&none  &kp UNDER  &kp PERCENT   &kp BACKSLASH  &kp AMPS  &kp PIPE      &kp N0       &kp N1  &kp N2  &kp N3  &none      &none
                                 &none          &none     &none         &lt 4 SPACE  &mo 9   &none
             >;
         };
@@ -492,10 +513,10 @@
 
         media {
             bindings = <
-       &none                 &none              &none          &none                  &none    &none             &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none       &none
-       &kp LG(LA(LC(LEFT)))  &kp LA(LG(LC(F)))  &kp LG(LC(F))  &kp LA(LG(LC(RIGHT)))  &none    &kp C_PLAY_PAUSE  &kp C_VOL_DN          &kp C_VOLUME_UP       &kp K_MUTE  &none
-&none  &none                 &none              &none          &none                  &none    &none             &none                 &none                 &none       &none  &none
-                                                &none          &none                  &none    &none             &none                 &none
+       &none                 &none              &kp LS(LG(NUMBER_3))  &kp LG(LS(NUMBER_4))   &none    &none             &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none       &none
+       &kp LG(LA(LC(LEFT)))  &kp LA(LG(LC(F)))  &kp LG(LC(F))         &kp LA(LG(LC(RIGHT)))  &none    &kp C_PLAY_PAUSE  &kp C_VOL_DN          &kp C_VOLUME_UP       &kp K_MUTE  &none
+&none  &none                 &none              &none                 &none                  &none    &none             &none                 &none                 &none       &none  &none
+                                                &none                 &none                  &none    &none             &none                 &none
             >;
         };
 
