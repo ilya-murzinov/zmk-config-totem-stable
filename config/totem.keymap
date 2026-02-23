@@ -204,9 +204,9 @@
             tapping-term-ms = <300>;
         };
 
-        tild_td: tild_td {
+        tilde_td: tilde_td {
             compatible = "zmk,behavior-tap-dance";
-            label = "TILD_TD";
+            label = "TILDE_TD";
             #binding-cells = <0>;
             bindings = <&kp TILDE>, <&tilde_slash>, <&tilde_slash_dot>;
 
@@ -503,7 +503,7 @@
         double_or: double_or {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp SPACE &kp PIPE &kp PIPE &kp SPACE>;
+            bindings = <&kp SPACE &kp PIPE &kp PIPE &kp SPACE>;
             label = "DOUBLE_OR";
         };
     };
@@ -542,14 +542,14 @@
             bindings = <
        &kp EXCL   &kp QUESTION  &kp AT         &kp HASH  &kp DOLLAR    &kp COMMA    &kp N7  &kp N8  &kp N9  &eq_td
        &minus_td  &plus_td      &div_td        &mult_td  &kp CARET     &kp DOT      &kp N4  &kp N5  &kp N6  &minus_td
-&none  &kp UNDER  &kp PERCENT   &kp BACKSLASH  &kp AMPS  &kp PIPE      &kp N0       &kp N1  &kp N2  &kp N3  &kp SLASH  &none
+&none  &kp UNDER  &kp PERCENT   &kp BACKSLASH  &amp_td   &pipe_td      &kp N0       &kp N1  &kp N2  &kp N3  &kp SLASH  &none
                                 &none          &none     &none         &lt 4 SPACE  &mo 9   &none
             >;
         };
 
         sym_add {
             bindings = <
-       &kp EXCL   &kp QUESTION  &kp AT         &kp HASH  &kp DOLLAR    &tild_td   &curly_td    &kp RIGHT_BRACE        &none  &eq_td
+       &kp EXCL   &kp QUESTION  &kp AT         &kp HASH  &kp DOLLAR    &tilde_td  &curly_td    &kp RIGHT_BRACE        &none  &eq_td
        &minus_td  &plus_td      &div_td        &mult_td  &kp CARET     &grave_td  &paren_td    &kp RIGHT_PARENTHESIS  &none  &minus_td
 &none  &kp UNDER  &kp PERCENT   &kp BACKSLASH  &amp_td   &pipe_td      &none      &bracket_td  &kp RIGHT_BRACKET      &none  &kp QUESTION  &none
                                 &none          &none     &none         &none      &none        &none
