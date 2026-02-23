@@ -79,6 +79,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = <5 15 26 16 6 7 17 28 27 8 18 29 9 19 30>;
             hold-trigger-on-release;
         };
@@ -91,6 +92,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = <0 0 1 4 10 11 12 13 14 21 22 23 24 25 2 3>;
             hold-trigger-on-release;
         };
@@ -108,7 +110,7 @@
             label = "MINUS_TD";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp MINUS>, <&minus>;
+            bindings = <&mt LEFT_SHIFT MINUS>, <&minus>;
         };
 
         plus_td: plus_td {
@@ -163,6 +165,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "APOS_QUOTE";
             bindings = <&apos_td>, <&kp DOUBLE_QUOTES>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -181,14 +184,6 @@
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings = <&kp GRAVE>, <&triple_grave>;
-        };
-
-        slash_td: slash_td {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SLASH_TD";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&kp SLASH>, <&kp QUESTION>;
         };
     };
 };
@@ -477,8 +472,8 @@
         sym {
             bindings = <
        &kp EXCL   &kp QUESTION  &kp AT         &kp HASH  &kp DOLLAR    &kp COMMA    &kp N7  &kp N8  &kp N9  &eq_td
-       &minus_td   &plus_td       &div_td         &mult_td   &kp CARET     &kp DOT      &kp N4  &kp N5  &kp N6  &minus_td
-&none  &kp UNDER  &kp PERCENT   &kp BACKSLASH  &kp AMPS  &kp PIPE      &kp N0       &kp N1  &kp N2  &kp N3  &slash_td  &none
+       &minus_td  &plus_td      &div_td        &mult_td  &kp CARET     &kp DOT      &kp N4  &kp N5  &kp N6  &minus_td
+&none  &kp UNDER  &kp PERCENT   &kp BACKSLASH  &kp AMPS  &kp PIPE      &kp N0       &kp N1  &kp N2  &kp N3  &kp SLASH  &none
                                 &none          &none     &none         &lt 4 SPACE  &mo 9   &none
             >;
         };
@@ -488,7 +483,7 @@
        &none  &none  &none  &none  &none    &kp TILDE  &curly_td    &kp RIGHT_BRACE        &none  &none
        &none  &none  &none  &none  &none    &grave_td  &paren_td    &kp RIGHT_PARENTHESIS  &none  &none
 &none  &none  &none  &none  &none  &none    &none      &bracket_td  &kp RIGHT_BRACKET      &none  &none  &none
-                     &none  &none  &none    &none      &none       &none
+                     &none  &none  &none    &none      &none        &none
             >;
         };
 
