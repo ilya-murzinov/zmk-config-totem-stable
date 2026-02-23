@@ -465,7 +465,7 @@
             label = "TRIPLE_GRAVE";
         };
 
-        pipe: pipe_td {
+        pipe: pipe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp PIPE &kp SPACE>;
