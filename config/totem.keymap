@@ -480,9 +480,9 @@
 
         sym_add {
             bindings = <
-       &none  &none  &none  &none  &none    &kp TILDE  &curly_td    &kp RIGHT_BRACE        &none  &none
-       &none  &none  &none  &none  &none    &grave_td  &paren_td    &kp RIGHT_PARENTHESIS  &none  &none
-&none  &none  &none  &none  &none  &none    &none      &bracket_td  &kp RIGHT_BRACKET      &none  &none  &none
+       &none  &none  &none  &none  &none    &kp TILDE  &curly_td    &kp RIGHT_BRACE        &none  &eq_td
+       &none  &none  &none  &none  &none    &grave_td  &paren_td    &kp RIGHT_PARENTHESIS  &none  &minus_td
+&none  &none  &none  &none  &none  &none    &none      &bracket_td  &kp RIGHT_BRACKET      &none  &kp QUESTION  &none
                      &none  &none  &none    &none      &none        &none
             >;
         };
