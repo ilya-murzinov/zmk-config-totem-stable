@@ -469,7 +469,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp PIPE &kp SPACE>;
-            label = "PIPE_TD";
+            label = "PIPE";
         };
 
         and: and {
