@@ -185,6 +185,33 @@
             tapping-term-ms = <300>;
             bindings = <&kp GRAVE>, <&triple_grave>;
         };
+
+        pipe_td: pipe_td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PIPE_TD";
+            #binding-cells = <0>;
+            bindings = <&kp PIPE>, <&pipe>, <&double_or>;
+
+            tapping-term-ms = <300>;
+        };
+
+        amp_td: amp_td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "AMP_TD";
+            #binding-cells = <0>;
+            bindings = <&kp AMPS>, <&amp>, <&and>;
+
+            tapping-term-ms = <300>;
+        };
+
+        tild_td: tild_td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TILD_TD";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE>, <&tilde_slash>, <&tilde_slash_dot>;
+
+            tapping-term-ms = <300>;
+        };
     };
 };
 
@@ -437,6 +464,48 @@
             bindings = <&kp GRAVE &kp GRAVE &kp GRAVE &kp LS(RET) &kp LS(RET) &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW>;
             label = "TRIPLE_GRAVE";
         };
+
+        pipe: pipe_td {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp PIPE &kp SPACE>;
+            label = "PIPE_TD";
+        };
+
+        and: and {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp A &kp N &kp D &kp SPACE>;
+            label = "AND";
+        };
+
+        amp: amp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp AMPS &kp AMPS &kp SPACE>;
+            label = "AMP";
+        };
+
+        tilde_slash: tilde_slash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &kp FSLH>;
+            label = "TILDE_SLASH";
+        };
+
+        tilde_slash_dot: tilde_slash_dot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &kp FSLH &kp DOT>;
+            label = "TILDE_SLASH_DOT";
+        };
+
+        double_or: double_or {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp SPACE &kp PIPE &kp PIPE &kp SPACE>;
+            label = "DOUBLE_OR";
+        };
     };
 
     keymap {
@@ -480,9 +549,9 @@
 
         sym_add {
             bindings = <
-       &kp EXCL   &kp QUESTION  &kp AT         &kp HASH  &kp DOLLAR    &kp TILDE  &curly_td    &kp RIGHT_BRACE        &none  &eq_td
+       &kp EXCL   &kp QUESTION  &kp AT         &kp HASH  &kp DOLLAR    &tild_td   &curly_td    &kp RIGHT_BRACE        &none  &eq_td
        &minus_td  &plus_td      &div_td        &mult_td  &kp CARET     &grave_td  &paren_td    &kp RIGHT_PARENTHESIS  &none  &minus_td
-&none  &kp UNDER  &kp PERCENT   &kp BACKSLASH  &kp AMPS  &kp PIPE      &kp SLASH  &bracket_td  &kp RIGHT_BRACKET      &none  &kp QUESTION  &none
+&none  &kp UNDER  &kp PERCENT   &kp BACKSLASH  &amp_td   &pipe_td      &none      &bracket_td  &kp RIGHT_BRACKET      &none  &kp QUESTION  &none
                                 &none          &none     &none         &none      &none        &none
             >;
         };
