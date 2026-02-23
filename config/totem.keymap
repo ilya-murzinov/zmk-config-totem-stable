@@ -289,6 +289,8 @@
         language_switch {
             bindings = <&kp LC(SPACE)>;
             key-positions = <34 35>;
+            timeout-ms = <300>;
+            layers = <0>;
         };
 
         caps_word {
@@ -451,9 +453,9 @@
 
         sym {
             bindings = <
-       &kp EXCL   &kp QUESTION  &kp AT         &kp HASH  &kp DOLLAR    &none        &kp N7  &kp N8  &kp N9  &none
-       &minus_b   &plus_b       &div_b         &mult_b   &kp CARET     &none        &kp N4  &kp N5  &kp N6  &eq_b
-&none  &kp UNDER  &kp PERCENT   &kp BACKSLASH  &kp AMPS  &kp PIPE      &kp N0       &kp N1  &kp N2  &kp N3  &kp DOT  &none
+       &kp EXCL   &kp QUESTION  &kp AT         &kp HASH  &kp DOLLAR    &kp COMMA    &kp N7  &kp N8  &kp N9  &none
+       &minus_b   &plus_b       &div_b         &mult_b   &kp CARET     &kp DOT      &kp N4  &kp N5  &kp N6  &eq_b
+&none  &kp UNDER  &kp PERCENT   &kp BACKSLASH  &kp AMPS  &kp PIPE      &kp N0       &kp N1  &kp N2  &kp N3  &none  &none
                                 &none          &none     &none         &lt 4 SPACE  &mo 9   &none
             >;
         };
