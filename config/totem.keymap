@@ -79,10 +79,6 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-
-            //            hold-trigger-key-positions = < ... >; // List of keys on the right side of the keyboard
-            //            hold-trigger-on-release;
-
             hold-trigger-key-positions = <5 15 26 16 6 7 17 28 27 8 18 29 9 19 30>;
             hold-trigger-on-release;
         };
@@ -95,76 +91,80 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-
-            //           hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
-            //           hold-trigger-on-release;
-
             hold-trigger-key-positions = <0 0 1 4 10 11 12 13 14 21 22 23 24 25 2 3>;
             hold-trigger-on-release;
         };
 
         eq_td: eq_td {
             compatible = "zmk,behavior-tap-dance";
-            label = "EQ_B";
+            label = "EQ_TD";
             #binding-cells = <0>;
+            tapping-term-ms = <300>;
             bindings = <&kp EQUAL>, <&eq>;
         };
 
         minus_td: minus_td {
             compatible = "zmk,behavior-tap-dance";
-            label = "MINUS_B";
+            label = "MINUS_TD";
             #binding-cells = <0>;
+            tapping-term-ms = <300>;
             bindings = <&kp MINUS>, <&minus>;
         };
 
         plus_td: plus_td {
             compatible = "zmk,behavior-tap-dance";
-            label = "PLUS_B";
+            label = "PLUS_TD";
             #binding-cells = <0>;
+            tapping-term-ms = <300>;
             bindings = <&kp PLUS>, <&plus>;
         };
 
         div_td: div_td {
             compatible = "zmk,behavior-tap-dance";
-            label = "DIV_B";
+            label = "DIV_TD";
             #binding-cells = <0>;
+            tapping-term-ms = <300>;
             bindings = <&kp SLASH>, <&div>;
         };
 
         mult_td: mult_td {
             compatible = "zmk,behavior-tap-dance";
-            label = "MULT_B";
+            label = "MULT_TD";
             #binding-cells = <0>;
+            tapping-term-ms = <300>;
             bindings = <&kp ASTRK>, <&mult>;
         };
 
         paren_td: paren_td {
             compatible = "zmk,behavior-tap-dance";
-            label = "PAREN_B";
+            label = "PAREN_TD";
             #binding-cells = <0>;
+            tapping-term-ms = <300>;
             bindings = <&kp LEFT_PARENTHESIS>, <&paren>;
         };
 
         bracket_td: bracket_td {
             compatible = "zmk,behavior-tap-dance";
-            label = "BRACKET_B";
+            label = "BRACKET_TD";
             #binding-cells = <0>;
+            tapping-term-ms = <300>;
             bindings = <&kp LEFT_BRACKET>, <&brackets>;
         };
 
         curly_td: curly_td {
             compatible = "zmk,behavior-tap-dance";
-            label = "CURLY_B";
+            label = "CURLY_TD";
             #binding-cells = <0>;
-            bindings = <&kp LG(LEFT_BRACE)>, <&curly_tdraces>;
+            tapping-term-ms = <300>;
+            bindings = <&kp LG(LEFT_BRACE)>, <&curly_braces>;
         };
 
         apos_quote: apos_quote {
             compatible = "zmk,behavior-mod-morph";
             label = "APOS_QUOTE";
             bindings = <&apos_td>, <&kp DOUBLE_QUOTES>;
-
             #binding-cells = <0>;
+            tapping-term-ms = <300>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -172,6 +172,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "APOS_TD";
             #binding-cells = <0>;
+            tapping-term-ms = <300>;
             bindings = <&apos_single>, <&apos_pair>, <&quote_pair>;
         };
 
@@ -179,6 +180,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "GRAVE_TD";
             #binding-cells = <0>;
+            tapping-term-ms = <300>;
             bindings = <&kp GRAVE>, <&triple_grave>;
         };
 
@@ -186,6 +188,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SLASH_TD";
             #binding-cells = <0>;
+            tapping-term-ms = <300>;
             bindings = <&kp SLASH>, <&kp QUESTION>;
         };
     };
@@ -406,7 +409,7 @@
             label = "BRACKETS";
         };
 
-        curly_tdraces: curly_tdraces {
+        curly_braces: curly_braces {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LBRC &kp RBRC &kp LEFT>;
@@ -434,11 +437,11 @@
             label = "QUOTE_PAIR";
         };
 
-        triple_grave: grave_td {
+        triple_grave: triple_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp GRAVE &kp GRAVE &kp LS(RET) &kp LS(RET) &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW>;
-            label = "GRAVE_TD";
+            label = "TRIPLE_GRAVE";
         };
     };
 
