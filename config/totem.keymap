@@ -264,24 +264,6 @@
             key-positions = <34 13>;
         };
 
-        close_tab {
-            bindings = <&kp LG(W)>;
-            key-positions = <9 35>;
-            layers = <2 5 9>;
-        };
-
-        new_tab {
-            bindings = <&kp LG(T)>;
-            key-positions = <35 19>;
-            layers = <2 5 9>;
-        };
-
-        reopen_tab {
-            bindings = <&kp LG(LS(T))>;
-            key-positions = <35 30>;
-            layers = <2 5 9>;
-        };
-
         del_word {
             bindings = <&kp LA(BACKSPACE)>;
             key-positions = <35 16 17>;
@@ -342,6 +324,11 @@
             key-positions = <12 13>;
             slow-release;
             layers = <0>;
+        };
+
+        shift_alt_nav {
+            bindings = <&shift_alt_nav_m>;
+            key-positions = <10 12>;
         };
     };
 
@@ -506,6 +493,17 @@
             bindings = <&kp SPACE &kp PIPE &kp PIPE &kp SPACE>;
             label = "DOUBLE_OR";
         };
+
+        shift_alt_nav_m: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 2 &kp LSHIFT &kp LEFT_ALT>,
+                <&macro_release>;
+
+            label = "NEW_MACRO";
+        };
     };
 
     keymap {
@@ -531,10 +529,10 @@
 
         nav {
             bindings = <
-       &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)      &kp LG(NUMBER_4)       &kp LG(N5)    &none     &kp PAGE_DOWN             &kp PAGE_UP                &none      &none
-       &kp LEFT_SHIFT    &kp LC(UP_ARROW)  &kp LC(LEFT)          &kp LC(RIGHT)          &none         &kp LEFT  &kp DOWN                  &kp UP                     &kp RIGHT  &none
-&none  &none             &none             &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &none         &none     &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none      &none  &trans
-                                           &none                 &none                  &none         &none     &none                     &none
+       &kp LG(NUMBER_1)  &kp LG(NUMBER_2)           &kp LG(NUMBER_3)            &kp LG(NUMBER_4)           &kp LG(N5)    &none     &kp PAGE_DOWN             &kp PAGE_UP                &none      &none
+       &kp LEFT_SHIFT    &hml (LCTRL) LC(UP_ARROW)  &hml (LALT) LC(LEFT_ARROW)  &hml (LEFT_GUI) LC(RIGHT)  &none         &kp LEFT  &kp DOWN                  &kp UP                     &kp RIGHT  &none
+&none  &none             &none                      &kp LG(LEFT_BRACKET)        &kp LG(RIGHT_BRACKET)      &none         &none     &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none      &none  &trans
+                                                    &none                       &none                      &none         &none     &none                     &none
             >;
         };
 
