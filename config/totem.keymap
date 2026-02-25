@@ -325,11 +325,6 @@
             slow-release;
             layers = <0>;
         };
-
-        shift_alt_nav {
-            bindings = <&shift_alt_nav_m>;
-            key-positions = <10 12>;
-        };
     };
 
     macros {
@@ -492,17 +487,6 @@
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp PIPE &kp PIPE &kp SPACE>;
             label = "DOUBLE_OR";
-        };
-
-        shift_alt_nav_m: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&mo 2 &kp LSHIFT &kp LEFT_ALT>,
-                <&macro_release>;
-
-            label = "NEW_MACRO";
         };
     };
 
