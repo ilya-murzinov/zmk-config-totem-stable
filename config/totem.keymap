@@ -28,7 +28,8 @@
 &msc {
     time-to-max-speed-ms = <300>;
     acceleration-exponent = <1>;
-}
+};
+
 &mt {
     flavor = "tap-preferred";
     tapping-term-ms = <200>;
