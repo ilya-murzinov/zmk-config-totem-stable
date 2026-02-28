@@ -45,6 +45,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = <5 15 26 16 6 7 17 28 27 8 18 29 9 19 30>;
             hold-trigger-on-release;
         };
@@ -57,6 +58,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = <0 0 1 4 10 11 12 13 14 21 22 23 24 25 2 3>;
             hold-trigger-on-release;
         };
@@ -129,6 +131,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "APOS_QUOTE";
             bindings = <&apos_td>, <&kp DOUBLE_QUOTES>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -239,31 +242,31 @@
         bt_clear {
             bindings = <&bt BT_CLR>;
             key-positions = <34 20>;
-            layers = <8>;
+            layers = <6>;
         };
 
         bt_0 {
             bindings = <&bt BT_SEL 0>;
             key-positions = <34 21>;
-            layers = <8>;
+            layers = <6>;
         };
 
         bt_1 {
             bindings = <&bt BT_SEL 1>;
             key-positions = <34 10>;
-            layers = <8>;
+            layers = <6>;
         };
 
         bt_2 {
             bindings = <&bt BT_SEL 2>;
             key-positions = <34 0>;
-            layers = <8>;
+            layers = <6>;
         };
 
         reset {
             bindings = <&sys_reset>;
             key-positions = <34 0 10 21>;
-            layers = <8>;
+            layers = <6>;
         };
 
         language_switch {
@@ -480,10 +483,10 @@
 
         nav {
             bindings = <
-       &kp LG(NUMBER_1)  &kp LG(NUMBER_2)           &kp LG(NUMBER_3)            &kp LG(NUMBER_4)           &kp LG(N5)    &none     &kp PAGE_DOWN             &kp PAGE_UP                &none      &none
-       &kp LEFT_SHIFT    &hml LCTRL LC(UP_ARROW)    &hml LALT LC(LEFT_ARROW)    &hml LEFT_GUI LC(RIGHT)    &none         &kp LEFT  &kp DOWN                  &kp UP                     &kp RIGHT  &none
-&none  &none             &none                      &kp LG(LEFT_BRACKET)        &kp LG(RIGHT_BRACKET)      &none         &none     &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none      &none  &trans
-                                                    &none                       &none                      &none         &none     &none                     &none
+       &kp LG(NUMBER_1)  &kp LG(NUMBER_2)         &kp LG(NUMBER_3)          &kp LG(NUMBER_4)         &kp LG(N5)    &none     &kp PAGE_DOWN             &kp PAGE_UP                &none      &none
+       &kp LEFT_SHIFT    &hml LCTRL LC(UP_ARROW)  &hml LALT LC(LEFT_ARROW)  &hml LEFT_GUI LC(RIGHT)  &none         &kp LEFT  &kp DOWN                  &kp UP                     &kp RIGHT  &none
+&none  &none             &none                    &kp LG(LEFT_BRACKET)      &kp LG(RIGHT_BRACKET)    &none         &none     &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))  &none      &none  &trans
+                                                  &none                     &none                    &none         &none     &none                     &none
             >;
         };
 
