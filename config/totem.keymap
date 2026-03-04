@@ -248,7 +248,7 @@
         bt_0 {
             bindings = <&bt BT_SEL 0>;
             key-positions = <34 21>;
-            layers = <8>;
+            layers = <7>;
         };
 
         bt_1 {
